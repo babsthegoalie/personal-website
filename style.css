@@ -18,18 +18,16 @@ body {
 }
 
 header {
-  font-size: 2rem;
+  font-size: 1rem;
   position: fixed;
   left: 0;
   right: 0;
   padding: .5em 1em;
-  box-shadow: 0 2px 4px -2px black;
 }
 
 main {
   min-height: 100vh;
   padding: 64px 24px 96px;
-  box-shadow: 0 0 12px -2px black;
   color: #eee;
   font-family: 'Open Sans', sans-serif;
 }
@@ -89,4 +87,9 @@ footer a:last-child {
 
 header, footer {
   background: #f8f8f8;
+}
+
+.haiku {
+  font-family: sans-serif;
+  font-size: 13px;
 }
