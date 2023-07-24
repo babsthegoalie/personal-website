@@ -1,23 +1,41 @@
-const haikuLines = [
-    "An old silent pond...",
-    "A frog jumps into the pond—",
-    "Splash! Silence again."
-];
+// The haiku to be displayed
+const haiku = `seeing it anew,
+solving problems makes my day,
+design is logic.`;
 
-const haikuContainer = document.getElementById('haiku');
-const lineDelay = 2000; // Delay between displaying each line in milliseconds
+// Function to split the haiku into lines and display them on the page
+function displayHaiku() {
+  // Split the haiku into lines using line breaks as the delimiter
+  const lines = haiku.split('\n');
 
-function displayHaikuLine(index) {
-    if (index >= haikuLines.length) {
-        return; // Haiku is complete
-    }
+  // Get the container element to display the lines
+  const container = document.getElementById('haikuContainer');
 
-    haikuContainer.textContent = haikuLines[index];
-    setTimeout(() => displayHaikuLine(index + 1), lineDelay);
+  // Loop through the lines and add them to the container
+  lines.forEach(line => {
+    const lineElement = document.createElement('p');
+    lineElement.textContent = line;
+    container.appendChild(lineElement);
+  });
 }
 
-displayHaikuLine(0); // Start displaying the haiku from the first line
+// Call the displayHaiku function when the page finishes loading
+window.onload = displayHaiku;
 
-In this example, we have an array haikuLines containing the three lines of the haiku. The JavaScript code will iterate through the lines and display them one by one with a delay of 2 seconds (2000 milliseconds) between each line. The lines will be displayed inside the <div> element with the id "haiku" in the HTML file.
 
-When you open the index.html file in your web browser, you will see the haiku being displayed line by line on the page.
+
+// Get the current year
+const currentYear = new Date().getFullYear();
+
+// Text to be displayed before the current year
+const beforeText = "© ";
+
+// Text to be displayed after the current year
+const afterText = " Barbara Kondracki";
+
+// Concatenate the text and the current year
+const displayText = beforeText + currentYear + afterText;
+
+// Display the result on the web page
+const outputDiv = document.getElementById("year");
+textContent = displayText;
