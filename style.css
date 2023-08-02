@@ -4,7 +4,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 
@@ -16,12 +16,12 @@ body {
 }
 
 header {
-  background: rgb(161, 219, 218);
+
   font-size: 1rem;
   position: fixed;
   left: 0;
   right: 0;
-  padding: .5em 1em;
+  padding: 1.5em .5em;
 }
 
 main {
@@ -37,13 +37,7 @@ header::after {
   content: '';
 }
 
-.name {
-  float: left;
-}
 
-.links {
-  float: right;
-}
 
 .links a {
   text-decoration: none;
@@ -75,20 +69,44 @@ footer .media-link {
   height: 30px;
 }
 
-footer a {
-  padding: 30px;
-  text-decoration: none;
-}
 
+.lines {
+  margin-left: 20px;
+}
 
 
 header, footer {
   background: rgb(201, 228, 226);
 }
 
-.haiku {
-  font-family: sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  padding: 0px 30px;
+
+
+.containerheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 85%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.column {
+  flex: 3;
+  padding: 20px;
+}
+
+.columnright {
+  flex: 1;
+  padding: 0px;
+}
+
+.hidden {
+  opacity: 0;
 }
